@@ -63,7 +63,8 @@ _start:
     mov rsi, newline    ;pointer to newline
     mov rdx, newline_len    ;length of newline
     syscall
-    
+
+    ;The operating system will reclaim all memory allocated to the process including buffer
    ; Exit
     mov rax, 60        ; syscall: exit
     xor rdi, rdi       ; status 0
